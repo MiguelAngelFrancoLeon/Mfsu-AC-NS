@@ -1,0 +1,605 @@
+/* ==============================================
+   RESPONSIVE DESIGN - ANÁLISIS MFSU
+   Breakpoints y adaptaciones para diferentes dispositivos
+   ============================================== */
+
+/* Variables responsivas */
+:root {
+    --container-padding-xl: 40px;
+    --container-padding-lg: 30px;
+    --container-padding-md: 20px;
+    --container-padding-sm: 15px;
+    --container-padding-xs: 10px;
+    
+    --font-size-h1-xl: 2.8em;
+    --font-size-h1-lg: 2.5em;
+    --font-size-h1-md: 2.2em;
+    --font-size-h1-sm: 1.9em;
+    --font-size-h1-xs: 1.6em;
+    
+    --chart-height-xl: 450px;
+    --chart-height-lg: 400px;
+    --chart-height-md: 350px;
+    --chart-height-sm: 300px;
+    --chart-height-xs: 250px;
+    
+    --grid-gap-xl: 30px;
+    --grid-gap-lg: 25px;
+    --grid-gap-md: 20px;
+    --grid-gap-sm: 15px;
+    --grid-gap-xs: 10px;
+}
+
+/* ==============================================
+   BREAKPOINTS PRINCIPALES
+   ============================================== */
+
+/* Extra Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        padding: var(--container-padding-xl);
+    }
+    
+    h1 {
+        font-size: var(--font-size-h1-xl);
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--grid-gap-xl);
+    }
+    
+    .chart-container {
+        height: var(--chart-height-xl);
+    }
+    
+    .controls {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--grid-gap-xl);
+    }
+    
+    .equation {
+        font-size: 1.3em;
+        padding: 20px 30px;
+    }
+}
+
+/* Large Desktop (1200px - 1439px) */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .container {
+        max-width: 1200px;
+        padding: var(--container-padding-lg);
+    }
+    
+    h1 {
+        font-size: var(--font-size-h1-lg);
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--grid-gap-lg);
+    }
+    
+    .chart-container {
+        height: var(--chart-height-lg);
+    }
+    
+    .controls {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: var(--grid-gap-lg);
+    }
+}
+
+/* Medium Desktop/Laptop (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        padding: var(--container-padding-md);
+    }
+    
+    h1 {
+        font-size: var(--font-size-h1-md);
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--grid-gap-md);
+    }
+    
+    .chart-container {
+        height: var(--chart-height-md);
+        padding: 15px;
+    }
+    
+    .controls {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: var(--grid-gap-md);
+    }
+    
+    .equation {
+        font-size: 1.1em;
+        padding: 15px 20px;
+    }
+    
+    .metric {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+}
+
+/* Small Desktop/Large Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        padding: var(--container-padding-md);
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: var(--font-size-h1-sm);
+        margin-bottom: 15px;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap-sm);
+    }
+    
+    .chart-container {
+        height: var(--chart-height-sm);
+        padding: 15px;
+    }
+    
+    .controls {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: var(--grid-gap-sm);
+        padding: 15px;
+    }
+    
+    .equation {
+        font-size: 1em;
+        padding: 12px 18px;
+    }
+    
+    .results-panel {
+        padding: 15px;
+    }
+    
+    .metrics-container {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .metric {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Large Mobile/Small Tablet (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    body {
+        padding: var(--container-padding-sm);
+    }
+    
+    .container {
+        padding: var(--container-padding-sm);
+        border-radius: 12px;
+    }
+    
+    h1 {
+        font-size: var(--font-size-h1-xs);
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+    
+    .subtitle {
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap-sm);
+    }
+    
+    .chart-container {
+        height: var(--chart-height-xs);
+        padding: 12px;
+    }
+    
+    .controls {
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap-sm);
+        padding: 12px;
+    }
+    
+    .control-group {
+        gap: 6px;
+    }
+    
+    .equation {
+        font-size: 0.9em;
+        padding: 10px 15px;
+        line-height: 1.4;
+    }
+    
+    .results-panel {
+        padding: 12px;
+    }
+    
+    .metrics-container {
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .metric {
+        padding: 4px 8px;
+        font-size: 0.75em;
+        border-radius: 15px;
+    }
+    
+    button {
+        padding: 8px 16px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+    body {
+        padding: var(--container-padding-xs);
+    }
+    
+    .container {
+        padding: var(--container-padding-xs);
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        line-height: 1.1;
+    }
+    
+    .subtitle {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap-xs);
+    }
+    
+    .chart-container {
+        height: 220px;
+        padding: 8px;
+    }
+    
+    .controls {
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap-xs);
+        padding: 8px;
+    }
+    
+    .control-group {
+        gap: 4px;
+    }
+    
+    label {
+        font-size: 0.85em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    input[type="range"] {
+        margin: 5px 0;
+    }
+    
+    .equation {
+        font-size: 0.8em;
+        padding: 8px 12px;
+        line-height: 1.3;
+    }
+    
+    .results-panel {
+        padding: 8px;
+    }
+    
+    .metrics-container {
+        justify-content: center;
+        gap: 4px;
+    }
+    
+    .metric {
+        padding: 3px 6px;
+        font-size: 0.7em;
+        border-radius: 12px;
+    }
+    
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 18px;
+        width: 100%;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+/* ==============================================
+   ORIENTACIÓN Y DISPOSITIVOS ESPECÍFICOS
+   ============================================== */
+
+/* Landscape en móviles */
+@media (max-width: 767px) and (orientation: landscape) {
+    .charts-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--grid-gap-sm);
+    }
+    
+    .chart-container {
+        height: 280px;
+    }
+    
+    .controls {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Portrait en tablets */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-container {
+        height: 350px;
+    }
+}
+
+/* Landscape en tablets */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .charts-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .chart-container {
+        height: 300px;
+    }
+}
+
+/* ==============================================
+   AJUSTES ESPECÍFICOS PARA COMPONENTES
+   ============================================== */
+
+/* Sliders en móviles */
+@media (max-width: 767px) {
+    input[type="range"]::-webkit-slider-thumb {
+        width: 24px;
+        height: 24px;
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Tooltips en móviles */
+@media (max-width: 767px) {
+    .tooltip::before {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90vw;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+/* Scrollbar en móviles */
+@media (max-width: 767px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+    }
+}
+
+/* ==============================================
+   ESTADOS DE CARGA RESPONSIVOS
+   ============================================== */
+
+@media (max-width: 767px) {
+    .loading::after {
+        width: 25px;
+        height: 25px;
+        border-width: 2px;
+    }
+}
+
+/* ==============================================
+   ANIMACIONES ADAPTATIVAS
+   ============================================== */
+
+/* Reducir animaciones en dispositivos de baja potencia */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .loading::after {
+        animation: none;
+    }
+}
+
+/* Animaciones más rápidas en móviles */
+@media (max-width: 767px) {
+    * {
+        transition-duration: 0.2s;
+    }
+    
+    .fade-in {
+        animation-duration: 0.3s;
+    }
+    
+    .slide-in {
+        animation-duration: 0.3s;
+    }
+}
+
+/* ==============================================
+   IMPRESIÓN RESPONSIVA
+   ============================================== */
+
+@media print {
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .chart-container {
+        height: auto !important;
+        min-height: 300px !important;
+        break-inside: avoid !important;
+    }
+    
+    .controls,
+    button {
+        display: none !important;
+    }
+    
+    .results-panel {
+        break-inside: avoid !important;
+    }
+    
+    .metric {
+        break-inside: avoid !important;
+    }
+}
+
+/* ==============================================
+   ALTO CONTRASTE Y ACCESIBILIDAD
+   ============================================== */
+
+@media (prefers-contrast: high) {
+    .container {
+        border: 2px solid #000;
+    }
+    
+    .chart-container {
+        border: 1px solid #000;
+    }
+    
+    .metric {
+        border: 1px solid #000;
+    }
+    
+    button {
+        border: 2px solid #000;
+    }
+}
+
+/* ==============================================
+   MODO OSCURO RESPONSIVO
+   ============================================== */
+
+@media (prefers-color-scheme: dark) {
+    @media (max-width: 767px) {
+        .container {
+            background: rgba(30, 39, 46, 0.95);
+        }
+        
+        .chart-container {
+            background: #2c3e50;
+        }
+    }
+}
+
+/* ==============================================
+   DISPOSITIVOS CON PANTALLA TÁCTIL
+   ============================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    button {
+        padding: 12px 24px;
+        min-height: 44px;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .metric {
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tooltip:hover::before {
+        display: none;
+    }
+    
+    .tooltip:active::before {
+        display: block;
+    }
+}
+
+/* ==============================================
+   OPTIMIZACIONES PARA RENDIMIENTO
+   ============================================== */
+
+/* Usar transform en lugar de cambiar propiedades layout */
+@media (max-width: 767px) {
+    .container {
+        will-change: transform;
+    }
+    
+    .chart-container {
+        will-change: transform;
+    }
+    
+    button:hover {
+        transform: translateY(-1px) translateZ(0);
+    }
+}
