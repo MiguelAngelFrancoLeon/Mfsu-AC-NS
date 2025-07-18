@@ -280,9 +280,9 @@ Las contribuciones son bienvenidas. Por favor:
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 👥 Autores
+## 👥 Autor
 
-- **Desarrollador Principal** - *Implementación inicial* - [Tu Nombre]
+- **Desarrollador Principal** - *Implementación inicial* - Miguel Angel Franco Leon
 
 ## 🙏 Agradecimientos
 
